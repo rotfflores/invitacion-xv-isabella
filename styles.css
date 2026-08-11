@@ -108,6 +108,7 @@ footer { padding: 60px 24px; text-align: center; background: #2e2725; color: #f9
 .monogram--footer { margin: 0 auto 18px; color: #f4d7ce; }
 footer p { margin: 0; font: 26px var(--serif); }
 footer span { font-size: 8px; letter-spacing: .25em; opacity: .55; }
+.copyright { display: block; margin-top: 20px; font-size: 9px; letter-spacing: .08em; opacity: .45; }
 
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
