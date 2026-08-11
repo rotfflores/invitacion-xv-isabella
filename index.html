@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
     <div class="noise" aria-hidden="true"></div>
     <header class="hero" id="inicio">
       <div class="hero__orb hero__orb--one"></div>
@@ -75,11 +76,11 @@
             <figcaption>Un nuevo capítulo</figcaption>
           </figure>
           <figure class="photo-frame photo-frame--side">
-            <img class="session-photo session-photo--three" src="assets/sesion-01.jpg" alt="Detalle del vestido de quinceañera en una sesión fotográfica" loading="lazy" />
+            <img class="session-photo session-photo--three" src="assets/sesion-03.jpg" alt="Quinceañera con vestido azul durante su celebración" loading="lazy" />
             <figcaption>Mi noche soñada</figcaption>
           </figure>
         </div>
-        <p class="gallery__credits">Fotografías de muestra: <a href="https://commons.wikimedia.org/wiki/File:Fortworth-dallas-quincea%C3%B1era-photography-fotolillyphotography_(26).jpg" target="_blank" rel="noreferrer">FotoLilly Photography</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></p>
+        <p class="gallery__credits">Fotografías de muestra: <a href="https://commons.wikimedia.org/wiki/File:Fortworth-dallas-quincea%C3%B1era-photography-fotolillyphotography_(26).jpg" target="_blank" rel="noreferrer">FotoLilly Photography</a> · <a href="https://commons.wikimedia.org/wiki/File:Quinceanera_(6785815254).jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a> · Licencias CC</p>
       </section>
 
       <section class="details section" id="detalles">
@@ -122,6 +123,35 @@
         </div>
       </section>
 
+      <section class="weather section" id="clima">
+        <div class="section__heading reveal">
+          <p class="eyebrow">Prepárate para celebrar</p>
+          <h2>Clima & recomendaciones</h2>
+          <p class="gallery__intro">El pronóstico se actualizará automáticamente en esta invitación cuando la fecha entre en el rango meteorológico confiable.</p>
+        </div>
+        <div class="weather-layout reveal">
+          <article class="forecast-card">
+            <div class="forecast-card__top">
+              <span class="weather-icon" id="weatherIcon" aria-hidden="true">◐</span>
+              <div><p class="eyebrow">Ciudad de México</p><h3 id="weatherTitle">Pronóstico pendiente</h3></div>
+            </div>
+            <div class="forecast-values" id="forecastValues" hidden>
+              <div><strong id="tempMax">—</strong><span>Máxima</span></div>
+              <div><strong id="tempMin">—</strong><span>Mínima</span></div>
+              <div><strong id="rainChance">—</strong><span>Lluvia</span></div>
+            </div>
+            <p id="weatherStatus">Consultando disponibilidad del pronóstico…</p>
+            <span class="forecast-badge" id="forecastBadge">Actualización automática</span>
+          </article>
+          <div class="recommendations">
+            <article><i aria-hidden="true">◒</i><div><h3>Una capa ligera</h3><p id="recTemperature">En noviembre las noches pueden sentirse frescas; lleva un chal o saco que combine con tu atuendo.</p></div></article>
+            <article><i aria-hidden="true">⌁</i><div><h3>Calzado cómodo</h3><p>Elige un par formal que también te permita bailar y disfrutar toda la noche.</p></div></article>
+            <article><i aria-hidden="true">☂</i><div><h3>Revisa antes de salir</h3><p id="recRain">Vuelve a esta sección el día del evento: ajustaremos la recomendación según la probabilidad de lluvia.</p></div></article>
+          </div>
+        </div>
+        <p class="weather-source">Datos meteorológicos de <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>.</p>
+      </section>
+
       <section class="info-grid section">
         <article class="info-panel reveal">
           <p class="eyebrow">Código de vestimenta</p>
@@ -137,6 +167,22 @@
           <a class="button button--light" href="https://www.liverpool.com.mx/tienda/giftregistry" target="_blank" rel="noreferrer">Ver mesa de regalos</a>
           <small>Evento #51234567</small>
         </article>
+      </section>
+
+      <section class="photo-share section" id="comparte">
+        <div class="share-card reveal">
+          <div class="share-copy">
+            <p class="eyebrow">Comparte tus recuerdos</p>
+            <h2>Ayúdanos a guardar cada momento</h2>
+            <p>Escanea el código para escribirnos por WhatsApp y solicitar acceso al grupo donde reuniremos todas las fotos y videos de la fiesta.</p>
+            <a class="button button--primary" href="https://wa.me/526182051723?text=Hola%2C%20quiero%20unirme%20al%20grupo%20para%20compartir%20las%20fotos%20de%20los%20XV%20de%20Isabella." target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+            <p class="share-note"><span>Importante</span> Por ahora el QR abre WhatsApp. El acceso directo al grupo se habilitará cuando el grupo sea creado.</p>
+          </div>
+          <div class="qr-wrap">
+            <div id="photoQr" class="qr-code" aria-label="Código QR para contactar por WhatsApp"></div>
+            <span>ESCANEA AQUÍ</span>
+          </div>
+        </div>
       </section>
 
       <section class="rsvp section" id="confirmar">
@@ -156,6 +202,7 @@
       <span>14 · 11 · 2026</span>
       <small class="copyright">© 2026 Rotf. Todos los derechos reservados.</small>
     </footer>
+    <script src="qrcode.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
