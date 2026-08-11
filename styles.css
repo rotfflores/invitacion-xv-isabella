@@ -75,7 +75,7 @@ blockquote { margin: 10px auto 48px; font: clamp(30px,4vw,52px)/1.35 var(--serif
 .photo-frame--featured .session-photo { height: 600px; }
 .session-photo--one { object-position: 57% center; }
 .session-photo--two { object-position: 50% center; }
-.session-photo--three { object-position: 36% center; }
+.session-photo--three { object-position: 50% 36%; }
 .photo-frame figcaption { margin-top: 18px; color: var(--rose-deep); font: 19px var(--serif); }
 .gallery__credits { margin: 70px auto 0; text-align: center; color: var(--muted); font-size: 8px; letter-spacing: .08em; }
 .gallery__credits a { text-underline-offset: 3px; }
